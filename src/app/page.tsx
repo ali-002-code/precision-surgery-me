@@ -45,13 +45,14 @@ export default function HomePage() {
       {/* Hero */}
       <section
         aria-labelledby="hero-heading"
-        className="relative overflow-hidden bg-[linear-gradient(100deg,#f7f9fc_0%,#eef2f7_55%,#e4ebf3_100%)]"
+        className="relative overflow-hidden bg-[linear-gradient(100deg,#f8fafc_0%,#f1f6fa_50%)]"
       >
         <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-[50%]">
           <Portrait
             tone="hero"
             priority
             sizes="(min-width: 1024px) 50vw, 100vw"
+            position="62% 22%"
             className="aspect-square w-full sm:aspect-[16/10] lg:aspect-auto lg:h-full"
           />
         </div>
@@ -92,6 +93,7 @@ export default function HomePage() {
         <div className="container-site grid items-center gap-12 lg:grid-cols-12 lg:gap-20">
           <Portrait
             sizes="(min-width: 1024px) 40vw, 100vw"
+            position="62% 0%"
             className="aspect-[4/5] w-full rounded-lg lg:col-span-5"
           />
           <div className="lg:col-span-7">

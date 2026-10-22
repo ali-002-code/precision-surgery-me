@@ -88,7 +88,7 @@ export default function AboutPage() {
           <Portrait
             priority
             sizes="(min-width: 1024px) 38vw, 100vw"
-            position="50% 20%"
+            position="62% 0%"
             className="aspect-[4/5] w-full rounded-lg shadow-card lg:col-span-5"
           />
         </div>

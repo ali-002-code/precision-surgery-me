@@ -26,7 +26,7 @@ npm run build && npm start
 
 ### Portrait
 
-The portrait lives in `public/images/` (`mohammad-eddama.png` for cards, `mohammad-eddama-hero.png` for the hero). Both are transparent cut-outs with the shirt embroidery removed. Paths are set in `portrait` in `src/content/site.ts`; set `src` to `null` to show the placeholder.
+The portrait is `public/images/mohammad-eddama-studio.webp` (converted from the studio headshot). Its path is set in `portrait` in `src/content/site.ts`; set `src` to `null` to show the placeholder.
 
 ## Preview on GitHub Pages
 

@@ -30,42 +30,23 @@ export function Portrait({
   if (portrait.src) {
     if (tone === "hero") {
       return (
-        <div
-          className={`relative overflow-hidden bg-[linear-gradient(160deg,#eef2f7_0%,#dfe7f1_50%,#cfdbe9_100%)] ${className}`}
-        >
-          {/* Soft studio-light glow behind the head */}
-          <div
-            aria-hidden
-            className="absolute right-[18%] top-[6%] aspect-square w-[60%] rounded-full bg-white/60 blur-3xl"
+        <div className={`relative overflow-hidden bg-[#f1f6fa] ${className}`}>
+          {/* Left edge feathered so the studio backdrop melts into the text panel */}
+          <Image
+            src={portrait.src}
+            alt={portrait.alt}
+            fill
+            sizes={sizes}
+            priority={priority}
+            className="object-cover lg:[mask-image:linear-gradient(to_right,transparent_0%,black_22%)]"
+            style={{ objectPosition: position }}
           />
-          {/* Feathered left edge so the backdrop melts into the text panel */}
-          <div
-            aria-hidden
-            className="absolute inset-y-0 left-0 hidden w-40 bg-gradient-to-r from-[#eef2f7] to-transparent lg:block"
-          />
-          {/* Anchored bottom-right so the shoulders run off the panel's edges */}
-          <div className="absolute bottom-0 right-0 aspect-[1152/1000] h-[94%] max-w-full">
-            <Image
-              src={portrait.heroSrc}
-              alt={portrait.alt}
-              fill
-              sizes={sizes}
-              priority={priority}
-              className="object-contain object-bottom"
-            />
-          </div>
         </div>
       );
     }
 
     return (
-      <div
-        className={`relative overflow-hidden bg-[linear-gradient(165deg,#f1f4f9_0%,#dfe7f1_55%,#cdd9e8_100%)] ${className}`}
-      >
-        <div
-          aria-hidden
-          className="absolute left-1/2 top-[8%] aspect-square w-[75%] -translate-x-1/2 rounded-full bg-white/60 blur-3xl"
-        />
+      <div className={`relative overflow-hidden bg-[#f1f6fa] ${className}`}>
         <Image
           src={portrait.src}
           alt={portrait.alt}

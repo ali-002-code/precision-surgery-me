@@ -22,14 +22,12 @@ export const site = {
     title: "Consultant Colorectal Surgeon",
   },
   /**
-   * Professional portrait: a transparent cut-out (WebP) so it blends into the
-   * page backgrounds. Set `src` to null to show the labelled placeholder.
+   * Professional studio portrait (pale blue backdrop that matches the hero).
+   * Set `src` to null to show the labelled placeholder.
    */
   portrait: {
-    src: `${basePath}/images/mohammad-eddama.webp` as string | null,
-    /** Wider hero version: left shoulder extended, trimmed flush to the right shoulder. */
-    heroSrc: `${basePath}/images/mohammad-eddama-hero.webp`,
-    alt: "Mr Mohammad Eddama, Consultant Colorectal Surgeon, smiling, wearing a surgical cap and dark scrubs",
+    src: `${basePath}/images/mohammad-eddama-studio.webp` as string | null,
+    alt: "Mr Mohammad Eddama, Consultant Colorectal Surgeon, smiling, wearing dark surgical scrubs",
   },
 } as const;
 
