@@ -1,0 +1,25 @@
+2:"$Sreact.fragment"
+3:"/precision-surgery-me/_next/static/chunks/1myp89e86igh0.js"
+4:I[39756,["$3"],"default"]
+5:I[37457,["$3"],"default"]
+a:I[97367,["$3"],"OutletBoundary"]
+b:"$Sreact.suspense"
+e:"ViewportBoundary"
+f:I[97367,["$3"],"$e"]
+10:"MetadataBoundary"
+11:I[97367,["$3"],"$10"]
+12:I[27201,["$3"],"IconMark"]
+7:X
+7:C
+8:X
+9:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","section",null,{"className":"section-y","children":["$","div",null,{"className":"container-site max-w-3xl","children":[["$","div",null,{"className":"","children":[["$","p",null,{"className":"eyebrow","children":"Legal"}],["$","h1",null,{"className":"mt-5 font-serif text-[2.5rem] leading-[1.08] tracking-[-0.015em] text-navy-900 sm:text-[3.25rem] lg:text-[3.75rem]","children":"Privacy Policy"}],["$","div",null,{"className":"mt-6 max-w-2xl text-[1.0625rem] leading-relaxed text-body","children":["$","p",null,{"children":"This policy has not yet been written. It must be prepared and approved before the website is published."}]}]]}],["$","div",null,{"className":"mt-10 rounded-lg border border-dashed border-line-strong p-7","children":[["$","p",null,{"className":"text-xs font-semibold uppercase tracking-[0.18em] text-accent","children":"Placeholder — to be supplied"}],["$","p",null,{"className":"mt-4 text-[0.9375rem]","children":"The final policy is expected to cover:"}],["$","ul",null,{"className":"mt-3 list-disc space-y-1.5 pl-5 text-[0.9375rem]","children":[["$","li","The data controller and contact details",{"children":"The data controller and contact details"}],["$","li","What personal information is collected and why",{"children":"What personal information is collected and why"}],["$","li","The lawful basis for processing, including special category health data",{"children":"The lawful basis for processing, including special category health data"}],["$","li","How long information is kept and how it is secured",{"children":"How long information is kept and how it is secured"}],["$","li","Your rights under UK GDPR and how to exercise them",{"children":"Your rights under UK GDPR and how to exercise them"}]]}]]}]]}]}],null,["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]]}],"p":"$@d","v":null,"s":"$8"}}]]
+1:[["children",{"s":"privacy-policy","h":64,"d":{"r":["$","$2","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","template":["$","$L5",null,{}]}]]}],"p":"$@6","v":"$7","s":"$8"},"c":"$Q9"}]]
+0:{"t":{"t":{"s":"","h":16,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$Lf",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#ffffff"}]]}],["$","$L11",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$b",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Privacy Policy | PrecisionSurgeryME"}],["$","meta","1",{"name":"description","content":"Privacy policy for PrecisionSurgeryME."}],["$","meta","2",{"name":"application-name","content":"PrecisionSurgeryME"}],["$","meta","3",{"name":"robots","content":"noindex, nofollow"}],["$","link","4",{"rel":"canonical","href":"https://ali-002-code.github.io/precision-surgery-me/privacy-policy/"}],["$","meta","5",{"property":"og:title","content":"Privacy Policy | PrecisionSurgeryME"}],["$","meta","6",{"property":"og:description","content":"Privacy policy for PrecisionSurgeryME."}],["$","meta","7",{"property":"og:site_name","content":"PrecisionSurgeryME"}],["$","meta","8",{"property":"og:locale","content":"en_GB"}],["$","meta","9",{"property":"og:type","content":"website"}],["$","meta","10",{"name":"twitter:card","content":"summary"}],["$","meta","11",{"name":"twitter:title","content":"Privacy Policy | PrecisionSurgeryME"}],["$","meta","12",{"name":"twitter:description","content":"Privacy policy for PrecisionSurgeryME."}],["$","link","13",{"rel":"icon","href":"/precision-surgery-me/icon.svg?icon.38nx28px04xil.svg","sizes":"any","type":"image/svg+xml"}],["$","$L12","14",{}]]}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":"$@13","v":null,"s":"$8"}},"a":"$@14","u":"$@15","b":"rcmQ8mzhl3KOZ0_3tY77p"}
+c:null
+15:true
+8:300
+8:C
+14:0
+6:"$undefined"
+13:"$undefined"
+d:"$undefined"

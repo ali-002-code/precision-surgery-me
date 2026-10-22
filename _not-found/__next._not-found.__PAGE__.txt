@@ -1,0 +1,27 @@
+2:"$Sreact.fragment"
+3:"/precision-surgery-me/_next/static/chunks/1myp89e86igh0.js"
+4:I[39756,["$3"],"default"]
+5:I[37457,["$3"],"default"]
+a:I[22016,["$3"],""]
+b:I[5014,["$3"],"default"]
+c:I[97367,["$3"],"OutletBoundary"]
+d:"$Sreact.suspense"
+10:"ViewportBoundary"
+11:I[97367,["$3"],"$10"]
+12:"MetadataBoundary"
+13:I[97367,["$3"],"$12"]
+14:I[27201,["$3"],"IconMark"]
+7:X
+7:C
+8:X
+9:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","section",null,{"className":"section-y","children":["$","div",null,{"className":"container-site max-w-2xl text-center","children":[["$","p",null,{"className":"eyebrow","children":"Page not found"}],["$","h1",null,{"className":"mt-5 font-serif text-[2.5rem] leading-tight text-navy-900 sm:text-[3.25rem]","children":"We couldn't find that page"}],["$","p",null,{"className":"mt-5 text-[1.0625rem] leading-relaxed","children":"The page may have moved. Try the treatments overview or return to the homepage."}],["$","div",null,{"className":"mt-10 flex flex-col justify-center gap-4 sm:flex-row","children":[["$","$La",null,{"className":"group inline-flex items-center justify-center gap-2.5 rounded-md font-medium tracking-[-0.005em] transition-colors duration-200 bg-navy-900 text-white shadow-button hover:bg-navy-800 h-14 px-7 text-[0.9375rem] ","href":"/","children":["Return home",["$","$Lb",null,{"icon":{"name":"arrow-right","size":24,"node":[["path",{"d":"M5 12h14","key":"1ays0h"}],["path",{"d":"m12 5 7 7-7 7","key":"xquz4c"}]]},"className":"size-4 transition-transform duration-200 group-hover:translate-x-0.5","aria-hidden":true,"strokeWidth":1.75}]]}],["$","$La",null,{"className":"group inline-flex items-center justify-center gap-2.5 rounded-md font-medium tracking-[-0.005em] transition-colors duration-200 border border-line-strong bg-white text-navy-900 hover:border-navy-900/40 hover:bg-surface-soft h-14 px-7 text-[0.9375rem] ","href":"/treatments","children":["View Treatments",["$","$Lb",null,{"icon":"$9:0:1:d:r:props:children:0:props:children:props:children:3:props:children:0:props:children:1:props:icon","className":"size-4 transition-transform duration-200 group-hover:translate-x-0.5","aria-hidden":true,"strokeWidth":1.75}]]}]]}]]}]}],null,["$","$Lc",null,{"children":["$","$d",null,{"name":"Next.MetadataOutlet","children":"$@e"}]}]]}],"p":"$@f","v":null,"s":"$8"}}]]
+1:[["children",{"s":"/_not-found","h":64,"d":{"r":["$","$2","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","template":["$","$L5",null,{}]}]]}],"p":"$@6","v":"$7","s":"$8"},"c":"$Q9"}]]
+0:{"t":{"t":{"s":"","h":16,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L11",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#ffffff"}]]}],["$","$L13",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$d",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Mr Mohammad Eddama | Consultant Colorectal Surgeon | PrecisionSurgeryME"}],["$","meta","1",{"name":"description","content":"Private colorectal surgical practice of Mr Mohammad Eddama, Consultant Colorectal Surgeon. Personalised, evidence-based care for a range of colorectal conditions."}],["$","meta","2",{"name":"application-name","content":"PrecisionSurgeryME"}],["$","meta","3",{"name":"robots","content":"noindex, nofollow"}],["$","meta","4",{"property":"og:title","content":"Mr Mohammad Eddama | Consultant Colorectal Surgeon | PrecisionSurgeryME"}],["$","meta","5",{"property":"og:description","content":"Private colorectal surgical practice of Mr Mohammad Eddama, Consultant Colorectal Surgeon. Personalised, evidence-based care for a range of colorectal conditions."}],["$","meta","6",{"property":"og:site_name","content":"PrecisionSurgeryME"}],["$","meta","7",{"property":"og:locale","content":"en_GB"}],["$","meta","8",{"property":"og:type","content":"website"}],["$","meta","9",{"name":"twitter:card","content":"summary"}],["$","meta","10",{"name":"twitter:title","content":"Mr Mohammad Eddama | Consultant Colorectal Surgeon | PrecisionSurgeryME"}],["$","meta","11",{"name":"twitter:description","content":"Private colorectal surgical practice of Mr Mohammad Eddama, Consultant Colorectal Surgeon. Personalised, evidence-based care for a range of colorectal conditions."}],["$","link","12",{"rel":"icon","href":"/precision-surgery-me/icon.svg?icon.38nx28px04xil.svg","sizes":"any","type":"image/svg+xml"}],["$","$L14","13",{}]]}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":"$@15","v":null,"s":"$8"}},"a":"$@16","u":"$@17","b":"rcmQ8mzhl3KOZ0_3tY77p"}
+e:null
+17:true
+8:300
+8:C
+16:0
+6:"$undefined"
+15:"$undefined"
+f:"$undefined"
