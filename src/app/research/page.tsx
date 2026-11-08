@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
-import { BookOpen, ExternalLink, FileText, Landmark } from "lucide-react";
+import { BookOpen, ExternalLink, FileBadge, FileText, HandCoins, Landmark } from "lucide-react";
 import { PageIntro } from "@/components/sections/page-intro";
 import { ConsultationCta } from "@/components/sections/consultation-cta";
 import { verifiedSources } from "@/content/site";
 import {
   fieldsOfResearch,
+  grants,
+  patent,
+  researchHighlights,
   researchThemes,
   selectedPublications,
   uclProfile,
@@ -13,7 +16,7 @@ import {
 export const metadata: Metadata = {
   title: "Research & Academic Work",
   description:
-    "Mr Mohammad Eddama's research and academic work at University College London, including selected publications listed on his UCL profile.",
+    "Mr Mohammad Eddama's translational research at University College London: extracellular vesicle diagnostics, epigenetics in Crohn's disease, a granted screening patent and selected publications.",
   alternates: { canonical: "/research" },
 };
 
@@ -80,14 +83,27 @@ export default function ResearchPage() {
               title={<span id="research-heading">Advancing Colorectal Care Through Research</span>}
             >
               <p>
-                Alongside his surgical practice, Mr Eddama is a {uclProfile.currentTitle} in the{" "}
-                {uclProfile.department} at {uclProfile.institution}. His published work spans
-                biomarker research, inflammation and clinical studies in emergency and colorectal
-                surgery.
+                Alongside his surgical practice, Mr Eddama is a {uclProfile.currentTitle} at{" "}
+                {uclProfile.institution}, where he leads a translational research programme
+                spanning extracellular vesicle diagnostics, epigenetic therapies in inflammatory
+                bowel disease and research embedded in everyday NHS practice.
               </p>
             </PageIntro>
           </div>
         </div>
+      </section>
+
+      <section aria-label="Research at a glance" className="border-b border-line bg-surface-soft">
+        <dl className="container-site grid grid-cols-2 gap-x-6 gap-y-8 py-12 lg:grid-cols-4 lg:divide-x lg:divide-line">
+          {researchHighlights.map((item) => (
+            <div key={item.label} className="flex flex-col px-2 text-center">
+              <dt className="order-last mx-auto mt-2 max-w-[14rem] text-sm leading-relaxed text-muted">
+                {item.label}
+              </dt>
+              <dd className="font-serif text-[2.25rem] leading-none text-navy-900">{item.value}</dd>
+            </div>
+          ))}
+        </dl>
       </section>
 
       <section aria-label="Academic affiliation" className="section-y">
@@ -96,10 +112,11 @@ export default function ResearchPage() {
             <Landmark aria-hidden className="size-8 text-navy-800" strokeWidth={1.4} />
             <h2 className="mt-6 font-serif text-[1.625rem] text-navy-900">University College London</h2>
             <p className="mt-3 leading-relaxed">
-              {uclProfile.currentTitle}, {uclProfile.department}. Mr Eddama has held academic
-              appointments at UCL since 2016, including Clinical Lecturer and Senior Clinical
-              Research Fellow, and leads the &ldquo;Doctor as Data Scientist&rdquo; module at UCL
-              Medical School.
+              Mr Eddama completed his PhD at UCL in 2017, on the angiogenic characterisation of the
+              mesenteric adipose tissue in Crohn&rsquo;s disease. He has held academic appointments
+              at UCL since 2016 and is now a {uclProfile.currentTitle}, Principal Investigator on
+              two research projects and supervisor to PhD students. He also directs the
+              &ldquo;Doctor as Data Scientist&rdquo; module at UCL Medical School.
             </p>
             <div className="mt-6">
               <ExternalTextLink href={verifiedSources.uclProfile}>UCL Profiles page</ExternalTextLink>
@@ -151,7 +168,48 @@ export default function ResearchPage() {
         </div>
       </section>
 
-      <section aria-labelledby="publications-heading" className="section-y">
+      <section aria-labelledby="funding-heading" className="section-y">
+        <div className="container-site grid gap-5 lg:grid-cols-12 lg:gap-6">
+          <article className="rounded-lg bg-navy-900 p-8 text-white sm:p-10 lg:col-span-5">
+            <FileBadge aria-hidden className="size-8 text-white/80" strokeWidth={1.4} />
+            <p className="mt-6 text-xs font-medium uppercase tracking-[0.24em] text-white/60">
+              Patent
+            </p>
+            <h2 className="mt-3 font-serif text-[1.75rem] leading-snug">{patent.title}</h2>
+            <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/75">{patent.detail}</p>
+            <p className="mt-6 text-[0.9375rem] leading-relaxed text-white/75">
+              The patent protects a novel colorectal cancer screening biomarker arising from Mr
+              Eddama&rsquo;s research.
+            </p>
+          </article>
+          <article className="rounded-lg border border-line bg-white p-8 shadow-card sm:p-10 lg:col-span-7">
+            <HandCoins aria-hidden className="size-8 text-navy-800" strokeWidth={1.4} />
+            <h2 id="funding-heading" className="mt-6 font-serif text-[1.625rem] text-navy-900">
+              Research funding
+            </h2>
+            <p className="mt-3 leading-relaxed">
+              Over &pound;400,000 in research funding secured as Principal Investigator, from
+              charitable and philanthropic funders.
+            </p>
+            <ul className="mt-6 divide-y divide-line border-y border-line">
+              {grants.map((grant) => (
+                <li
+                  key={`${grant.year}-${grant.project}`}
+                  className="grid gap-1 py-4 sm:grid-cols-[3.5rem_1fr] sm:gap-4"
+                >
+                  <span className="font-serif text-accent">{grant.year}</span>
+                  <span>
+                    <span className="block text-[0.9375rem] text-ink">{grant.project}</span>
+                    <span className="block text-sm text-muted">{grant.funder}</span>
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="publications-heading" className="section-y bg-surface-soft">
         <div className="container-site grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-4">
             <BookOpen aria-hidden className="size-8 text-navy-800" strokeWidth={1.4} />
@@ -162,9 +220,8 @@ export default function ResearchPage() {
               Selected publications
             </h2>
             <p className="mt-5 text-[0.9375rem] leading-relaxed text-muted">
-              A selection of the {uclProfile.totalOutputs} research outputs listed on Mr
-              Eddama&apos;s UCL profile, on which he is an author or co-author. Information
-              retrieved {uclProfile.retrieved}.
+              Selected publications in biomarker and translational research. Mr Eddama has{" "}
+              {uclProfile.totalOutputs} research outputs listed on his UCL profile.
             </p>
             <div className="mt-5">
               <ExternalTextLink href={`${verifiedSources.uclProfile}/publications`}>
@@ -176,7 +233,8 @@ export default function ResearchPage() {
             {selectedPublications.map((publication) => (
               <li key={publication.doi} className="border-t border-line py-7 last:border-b">
                 <p className="text-xs font-medium uppercase tracking-[0.16em] text-muted">
-                  {publication.type} · {publication.year}
+                  {publication.year}
+                  {publication.role && <> · {publication.role}</>}
                 </p>
                 <h3 className="mt-2 font-serif text-[1.25rem] leading-snug text-navy-900">
                   <a

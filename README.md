@@ -1,17 +1,19 @@
 # PrecisionSurgeryME
 
-Development prototype of the website for the private surgical practice of
-Mr Mohammad Eddama, Consultant Colorectal Surgeon.
+Website for the private surgical practice of Mr Mohammad Eddama, Consultant
+Colorectal Surgeon — https://precisionsurgeryme.com
 
-Next.js 16 (App Router, Cache Components) · TypeScript · Tailwind CSS v4 · Lucide icons.
+Next.js 16 (App Router, static export) · TypeScript · Tailwind CSS v4 · Lucide icons.
 
 ## Run locally
 
 ```bash
 npm install
-npm run dev        # http://localhost:3000
+npm run dev          # http://localhost:3000
 npm run lint
-npm run build && npm start
+npm run typecheck
+npm run build        # static site in out/
+npm start            # serve out/ locally
 ```
 
 ## Where things live
@@ -19,30 +21,56 @@ npm run build && npm start
 | What | File |
 | --- | --- |
 | Design tokens (colour, type, spacing, radii) | `src/app/globals.css` |
-| Site name, navigation, placeholders, portrait | `src/content/site.ts` |
+| Site name, URL, contact details, registration, portrait | `src/content/site.ts` |
 | Treatments (cards + detail pages) | `src/content/treatments.ts` |
-| Verified UCL appointments & publications | `src/content/research.ts` |
-| Enquiry form (not connected) | `src/components/contact/enquiry-form.tsx` |
+| Career, qualifications, awards, research, publications | `src/content/research.ts` |
+| Privacy / cookie policies | `src/app/privacy-policy`, `src/app/cookie-policy` |
+| Enquiry form (hidden until a backend exists) | `src/components/contact/enquiry-form.tsx` |
+| Cloudflare response headers | `public/_headers` |
 
-### Portrait
+The portrait is `public/images/mohammad-eddama-studio.webp`.
 
-The portrait is `public/images/mohammad-eddama-studio.webp` (converted from the studio headshot). Its path is set in `portrait` in `src/content/site.ts`; set `src` to `null` to show the placeholder.
+## Deployment (Cloudflare Pages)
 
-## Preview on GitHub Pages
+The site is a fully static export, hosted on Cloudflare Pages and connected to
+this GitHub repository. Every push to `main` builds and deploys automatically.
 
-```bash
-npm run build:pages   # static export to out/ under /precision-surgery-me
-```
+| Setting | Value |
+| --- | --- |
+| Build command | `npm run build` |
+| Output directory | `out` |
+| Node version | `NODE_VERSION=22` |
 
-The `out/` folder is published to the `gh-pages` branch. This preview build
-skips robots.txt/sitemap (pages are `noindex`) and turns off Cache Components,
-which static export does not support.
+Custom domain: `precisionsurgeryme.com` (canonical). `www.precisionsurgeryme.com`
+redirects permanently to the apex domain.
 
-## Before launch
+### Environment variables (Cloudflare build settings)
 
-- Supply and verify: qualifications, GMC number, contact details,
-  consultation locations, privacy and cookie policies.
-- Clinically review all treatment copy.
-- Connect the enquiry form to a secure, UK GDPR-compliant backend.
-- Set `NEXT_PUBLIC_SITE_URL` and, only once approved, `NEXT_PUBLIC_ALLOW_INDEXING=true`
-  (search engines are blocked until then).
+| Variable | Default | Purpose |
+| --- | --- | --- |
+| `NEXT_PUBLIC_SITE_URL` | `https://precisionsurgeryme.com` | Canonical URLs, sitemap |
+| `NEXT_PUBLIC_ALLOW_INDEXING` | unset (blocked) | Set to `true` **only after** clinical and legal sign-off |
+
+While indexing is off, every page is `noindex` and `robots.txt` disallows all
+crawlers. This does not make the site private.
+
+### Making updates
+
+Edit the content files above, run `npm run build` to check, then commit and
+push to `main`. Cloudflare redeploys in a minute or two.
+
+### Family preview (GitHub Pages)
+
+`npm run build:pages` builds a copy under `/precision-surgery-me` for the
+`gh-pages` branch. It is separate from the production site.
+
+## Before public launch
+
+- Clinical sign-off of all treatment pages by Mr Eddama.
+- Complete privacy policy placeholders: legal entity, ICO registration number,
+  postal address, enquiry retention period. ICO registration itself.
+- Consultation locations.
+- Connect the enquiry form to a secure, UK GDPR-compliant backend (or keep the
+  email/phone buttons).
+- Then set `NEXT_PUBLIC_ALLOW_INDEXING=true`, redeploy, and submit
+  `https://precisionsurgeryme.com/sitemap.xml` in Google Search Console.

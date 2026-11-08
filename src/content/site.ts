@@ -10,8 +10,11 @@ export const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export const site = {
   name: "PrecisionSurgeryME",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
-  /** Keep false until the site is approved for public launch. */
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://precisionsurgeryme.com",
+  /**
+   * Search-engine indexing. Keep false until clinical and legal content is
+   * approved; then set NEXT_PUBLIC_ALLOW_INDEXING=true in the Cloudflare build.
+   */
   indexable: process.env.NEXT_PUBLIC_ALLOW_INDEXING === "true",
   description:
     "Private colorectal surgical practice of Mr Mohammad Eddama, Consultant Colorectal Surgeon. Personalised, evidence-based care for a range of colorectal conditions.",
@@ -20,6 +23,12 @@ export const site = {
     givenName: "Mohammad",
     familyName: "Eddama",
     title: "Consultant Colorectal Surgeon",
+    postNominals: "MD PhD MSc FRCS FHEA",
+  },
+  /** General Medical Council registration (from Mr Eddama's CV). */
+  registration: {
+    gmcNumber: "6099559",
+    register: "Specialist Register",
   },
   /**
    * Professional studio portrait (pale blue backdrop that matches the hero).
@@ -44,12 +53,17 @@ export const legalLinks = [
   { label: "Cookie Policy", href: "/cookie-policy" },
 ] as const;
 
-/** PLACEHOLDER contact details — none of these are real yet. */
-export const contactPlaceholders = {
-  phone: "[Phone number to be confirmed]",
-  email: "[Email address to be confirmed]",
+/** Practice contact details. `locations` is still a placeholder. */
+export const contact = {
+  phone: { display: "+44 7956 699867", href: "tel:+447956699867" },
+  email: { display: "emineddama@icloud.com", href: "mailto:emineddama@icloud.com" },
   locations: "[Consultation locations to be confirmed]",
-  registration: "[GMC registration details to be confirmed]",
+  /**
+   * The web enquiry form stays hidden until it is connected to a secure,
+   * UK GDPR-compliant backend. Until then the contact page offers email and
+   * phone buttons instead.
+   */
+  enquiryFormEnabled: false,
 } as const;
 
 /** Sources used for the biographical and research content. */

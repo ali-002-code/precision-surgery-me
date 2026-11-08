@@ -1,9 +1,8 @@
 import Link from "next/link";
-import { contactPlaceholders, legalLinks, navigation, site } from "@/content/site";
+import { contact, legalLinks, navigation, site } from "@/content/site";
 import { treatments } from "@/content/treatments";
 import { CopyrightYear } from "./copyright-year";
 import { Logo } from "./logo";
-
 
 export function SiteFooter() {
   return (
@@ -12,6 +11,7 @@ export function SiteFooter() {
         <div className="md:col-span-5">
           <Logo />
           <p className="mt-5 font-serif text-xl text-navy-900">{site.surgeon.name}</p>
+          <p className="mt-1 text-xs tracking-[0.08em] text-muted">{site.surgeon.postNominals}</p>
           <p className="eyebrow mt-2 !text-[0.6875rem]">{site.surgeon.title}</p>
           <p className="mt-6 max-w-sm text-sm leading-relaxed text-muted">
             Private consultations for a range of colorectal conditions. This website provides
@@ -57,11 +57,19 @@ export function SiteFooter() {
             Contact
           </h2>
           <ul className="mt-5 space-y-3 text-sm text-muted">
-            <li>{contactPlaceholders.phone}</li>
-            <li>{contactPlaceholders.email}</li>
+            <li>
+              <a href={contact.phone.href} className="text-body hover:text-navy-900">
+                {contact.phone.display}
+              </a>
+            </li>
+            <li>
+              <a href={contact.email.href} className="break-all text-body hover:text-navy-900">
+                {contact.email.display}
+              </a>
+            </li>
             <li>
               <Link href="/contact" className="text-body hover:text-navy-900">
-                Enquiry form
+                Make an enquiry
               </Link>
             </li>
           </ul>
@@ -71,7 +79,7 @@ export function SiteFooter() {
       <div className="border-t border-line">
         <div className="container-site flex flex-col gap-4 py-6 text-xs text-muted md:flex-row md:items-center md:justify-between">
           <p>
-            © <CopyrightYear /> {site.name}. {contactPlaceholders.registration}
+            © <CopyrightYear /> {site.name}. GMC No. {site.registration.gmcNumber} ({site.registration.register}).
           </p>
           <ul className="flex gap-6">
             {legalLinks.map((item) => (

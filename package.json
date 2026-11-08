@@ -5,9 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "npx --yes serve@14 out",
     "lint": "eslint",
-    "build:pages": "PAGES_EXPORT=true NEXT_PUBLIC_BASE_PATH=/precision-surgery-me NEXT_PUBLIC_SITE_URL=https://ali-002-code.github.io/precision-surgery-me next build && touch out/.nojekyll"
+    "typecheck": "next typegen && tsc --noEmit",
+    "build:pages": "NEXT_PUBLIC_BASE_PATH=/precision-surgery-me NEXT_PUBLIC_SITE_URL=https://ali-002-code.github.io/precision-surgery-me next build && touch out/.nojekyll"
   },
   "dependencies": {
     "lucide-react": "^1.61.0",
@@ -24,5 +25,8 @@
     "eslint-config-next": "16.4.2",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=20.9"
   }
 }

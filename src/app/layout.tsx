@@ -41,17 +41,28 @@ export const viewport: Viewport = {
   themeColor: "#ffffff",
 };
 
-/* Structured data limited to verified facts (see src/content/research.ts). */
+/* Structured data limited to facts from Mr Eddama's CV and UCL profile (see src/content/research.ts). */
 const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Mohammad Eddama",
   honorificPrefix: "Mr",
+  honorificSuffix: site.surgeon.postNominals,
   jobTitle: site.surgeon.title,
   affiliation: [
+    { "@type": "Hospital", name: "Portsmouth University Hospitals NHS Trust" },
+    { "@type": "Hospital", name: "University College London Hospital" },
     { "@type": "CollegeOrUniversity", name: "University College London" },
-    { "@type": "Hospital", name: "Oxford University Hospitals NHS Trust" },
   ],
+  alumniOf: [
+    { "@type": "CollegeOrUniversity", name: "University College London" },
+    { "@type": "CollegeOrUniversity", name: "University of Bristol" },
+  ],
+  identifier: {
+    "@type": "PropertyValue",
+    propertyID: "GMC",
+    value: site.registration.gmcNumber,
+  },
   sameAs: [verifiedSources.uclProfile, verifiedSources.orcid],
   url: site.url,
 };

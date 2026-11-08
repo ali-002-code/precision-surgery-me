@@ -133,8 +133,8 @@ export function EnquiryForm() {
           <p className="font-medium">Thank you — your details passed validation.</p>
           <p className="mt-1">
             This is a development preview and the enquiry form is not yet connected, so{" "}
-            <strong>nothing has been sent</strong>. Please use the contact details provided once
-            they are available.
+            <strong>nothing has been sent</strong>. Please call or email using the contact
+            details on this page.
           </p>
         </div>
       )}

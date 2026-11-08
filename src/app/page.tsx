@@ -35,7 +35,7 @@ const features: Feature[] = [
   {
     icon: BarChart3,
     title: "Academic Research",
-    description: "Research activity at University College London",
+    description: "Principal Research Fellow, University College London",
   },
 ];
 
@@ -106,14 +106,16 @@ export default function HomePage() {
             </h2>
             <div className="prose-site mt-7 max-w-xl text-[1.0625rem] leading-[1.75]">
               <p>
-                {site.surgeon.name} is a Consultant Colorectal Surgeon offering private
-                consultations for a range of benign colorectal and anal conditions, including
-                haemorrhoids, anal fissures and anal skin tags.
+                {site.surgeon.name} ({site.surgeon.postNominals}) is a Consultant Colorectal and
+                General Surgeon at Portsmouth University Hospitals NHS Trust and an Honorary
+                Consultant at University College London Hospital. He offers private consultations
+                for a range of colorectal and anal conditions, including haemorrhoids, anal
+                fissures and anal skin tags.
               </p>
               <p>
-                Alongside his clinical work, he is a {uclProfile.currentTitle} in the{" "}
-                {uclProfile.department} at {uclProfile.institution}, where his research has
-                included work on biomarkers, inflammation and surgical decision-making.
+                Alongside his clinical work, he is a {uclProfile.currentTitle} at{" "}
+                {uclProfile.institution}, where he completed his PhD and leads research into
+                earlier detection of colorectal cancer and new treatments for Crohn&apos;s disease.
               </p>
             </div>
             <div className="mt-10 flex flex-wrap gap-x-8 gap-y-4">
