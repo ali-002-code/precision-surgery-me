@@ -55,10 +55,11 @@ Pages build would pick it up.
 | Variable | Default | Purpose |
 | --- | --- | --- |
 | `NEXT_PUBLIC_SITE_URL` | `https://precisionsurgeryme.com` | Canonical URLs, sitemap |
-| `NEXT_PUBLIC_ALLOW_INDEXING` | unset (blocked) | Set to `true` **only after** clinical and legal sign-off |
+| `NEXT_PUBLIC_ALLOW_INDEXING` | `true` in production (since Nov 2026); unset elsewhere | Allows search engines: `index, follow` meta and an open robots.txt |
 
-While indexing is off, every page is `noindex` and `robots.txt` disallows all
-crawlers. This does not make the site private.
+Without the variable (local builds, previews), every page is `noindex` and
+`robots.txt` disallows all crawlers. Sitemap for Google Search Console:
+`https://precisionsurgeryme.com/sitemap.xml`.
 
 ### Making updates
 
@@ -78,5 +79,4 @@ push to `main`. Cloudflare redeploys in a minute or two.
 - Consultation locations.
 - Connect the enquiry form to a secure, UK GDPR-compliant backend (or keep the
   email/phone buttons).
-- Then set `NEXT_PUBLIC_ALLOW_INDEXING=true`, redeploy, and submit
-  `https://precisionsurgeryme.com/sitemap.xml` in Google Search Console.
+- Indexing is enabled in production; sitemap submitted via Google Search Console.
