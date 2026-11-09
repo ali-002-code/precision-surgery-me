@@ -41,8 +41,14 @@ this GitHub repository. Every push to `main` builds and deploys automatically.
 | Output directory | `out` |
 | Node version | `NODE_VERSION=22` |
 
-Custom domain: `precisionsurgeryme.com` (canonical). `www.precisionsurgeryme.com`
-redirects permanently to the apex domain.
+Cloudflare Pages project: `precisionsurgeryme` (https://precisionsurgeryme.pages.dev).
+Custom domain: `precisionsurgeryme.com` (canonical).
+
+`www.precisionsurgeryme.com` is served by a tiny separate Worker in
+`cloudflare/www-redirect/` that returns a permanent 301 to the apex, keeping the
+path and query. Redeploy it with `cd cloudflare/www-redirect && npx wrangler deploy`
+(it rarely needs changing). Do not add a Wrangler config at the repo root: the
+Pages build would pick it up.
 
 ### Environment variables (Cloudflare build settings)
 
